@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/pallete.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -12,7 +13,14 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Sanjivani"),
+        title: const Text(
+          "Sanjivani",
+          style: TextStyle(
+            fontFamily: 'Cera Pro',
+            color: Pallete.mainFontColor,
+            fontSize: 22,
+          ),
+        ),
         leading: const Icon(Icons.menu),
         centerTitle: true,
       ),
@@ -21,6 +29,7 @@ class _HomePageState extends State<HomePage> {
           Stack(
             children: [
               Center(
+                  // Icon: const Icon(Icons.send),
                   child: Container(
                   height: 120,
                   width: 120,
@@ -39,7 +48,33 @@ class _HomePageState extends State<HomePage> {
                 ),
               )
             ],
-          )
+          ),
+          Container(
+            padding: const EdgeInsets.symmetric(
+              horizontal: 20,
+              vertical: 10,
+            ),
+            margin: const EdgeInsets.symmetric(horizontal: 40).copyWith(
+              top: 30,
+            ),
+            decoration: BoxDecoration(
+              
+              color: Colors.black12,
+              border: Border.all(
+                color: Pallete.borderColor
+              ),
+              borderRadius: BorderRadius.circular(20).copyWith(
+                topLeft: Radius.zero,
+              ),
+            ),
+            child: const Text("Hello, How can I assist you to day !",
+              style: TextStyle(
+                fontFamily: 'Cera Pro',
+                color: Pallete.mainFontColor,
+                fontSize: 22,
+              ),
+            ),
+          ),
         ],
       ),
     );
