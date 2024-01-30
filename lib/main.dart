@@ -1,38 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/homepage.dart';
+import 'package:flutter_application_1/pallete.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        // backgroundColor: Colors.deepPurple ,
-        appBar: AppBar(
-          backgroundColor: Colors.white, 
-          title: const Row(
-            children: [
-              Icon(
-                Icons.menu,
-                size: 30,
-              ),
-            ],
-          ),
-        ),
-        body: const Center(
-          child: Row(
-            children: [
-              Text("data"),
-              // Size Size(11 width, 10 height)
-            ],
-          )
-        ),
-        backgroundColor: Colors.white,
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData.light(useMaterial3: true).copyWith(
+        scaffoldBackgroundColor: Pallete.whiteColor,
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Pallete.whiteColor
+        )
       ),
-    );
+      home: const HomePage(),
+     );
   }
 }
