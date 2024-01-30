@@ -13,20 +13,25 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         // backgroundColor: Colors.deepPurple ,
         appBar: AppBar(
-          backgroundColor: Colors.deepPurple, // If you want to use the primary color from the theme
+          backgroundColor: Colors.white, 
           title: const Row(
             children: [
               Icon(
                 Icons.menu,
-                // color: Colors.black87, // Remove this line to inherit the color from AppBar
                 size: 30,
               ),
             ],
           ),
         ),
         body: const Center(
-          child: Text("data"),
+          child: Row(
+            children: [
+              Text("data"),
+              // Size Size(11 width, 10 height)
+            ],
+          )
         ),
+        backgroundColor: Colors.white,
       ),
     );
   }
