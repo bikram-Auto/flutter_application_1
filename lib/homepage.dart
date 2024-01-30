@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/cercular_avtar.dart';
 import 'package:flutter_application_1/pallete.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+  const HomePage({Key? key}) : super(key: key);
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -26,29 +27,7 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Column(
         children: [
-          Stack(
-            children: [
-              Center(
-                  // Icon: const Icon(Icons.send),
-                  child: Container(
-                  height: 120,
-                  width: 120,
-                  margin: const EdgeInsets.only(top: 4),
-                  decoration: const BoxDecoration(
-                    color: Color.fromARGB(255, 231, 239, 170),
-                    shape: BoxShape.circle
-                  ),
-                ),
-              ),
-              Container(
-                height: 125,
-                decoration: const BoxDecoration(
-                  shape: BoxShape.circle,
-                  image: DecorationImage(image: AssetImage('assets/images/pngwing.com.png')),
-                ),
-              )
-            ],
-          ),
+          const CircularAvatar(),
           Container(
             padding: const EdgeInsets.symmetric(
               horizontal: 20,
@@ -58,16 +37,17 @@ class _HomePageState extends State<HomePage> {
               top: 30,
             ),
             decoration: BoxDecoration(
-              
+              // const CircularAvatar(),
               color: Colors.black12,
               border: Border.all(
-                color: Pallete.borderColor
+                color: Pallete.borderColor,
               ),
               borderRadius: BorderRadius.circular(20).copyWith(
                 topLeft: Radius.zero,
               ),
             ),
-            child: const Text("Hello, How can I assist you to day !",
+            child: const Text(
+              "Hello, How can I assist you today!",
               style: TextStyle(
                 fontFamily: 'Cera Pro',
                 color: Pallete.mainFontColor,
