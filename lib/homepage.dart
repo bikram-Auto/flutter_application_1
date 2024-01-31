@@ -22,7 +22,7 @@ class _HomePageState extends State<HomePage> {
             fontSize: 22,
           ),
         ),
-        leading: const Icon(Icons.menu),
+        // leading: const Icon(Icons.menu),
         centerTitle: true,
       ),
       body: Column(
@@ -34,10 +34,9 @@ class _HomePageState extends State<HomePage> {
               vertical: 10,
             ),
             margin: const EdgeInsets.symmetric(horizontal: 40).copyWith(
-              top: 30,
+              // top: 5,
             ),
             decoration: BoxDecoration(
-              // const CircularAvatar(),
               color: Colors.black12,
               border: Border.all(
                 color: Pallete.borderColor,
@@ -47,7 +46,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             child: const Text(
-              "Hello, How can I assist you today!",
+              "Hello, How can I assist you today ?",
               style: TextStyle(
                 fontFamily: 'Cera Pro',
                 color: Pallete.mainFontColor,

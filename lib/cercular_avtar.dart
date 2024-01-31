@@ -5,29 +5,36 @@ class CircularAvatar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        Center(
-          child: Container(
-            height: 120,
-            width: 120,
-            margin: const EdgeInsets.only(top: 4),
-            decoration: const BoxDecoration(
-              color: Color.fromARGB(255, 231, 239, 170),
-              shape: BoxShape.circle,
-            ),
+    return Padding(
+      padding: const EdgeInsets.only(
+        top: 5,
+        left: 5
+      ),
+      child: Stack(
+        children: [
+          const Align(
+            alignment: Alignment.centerRight,
           ),
-        ),
-        Container(
-          height: 125,
-          decoration: const BoxDecoration(
-            // shape: BoxShape.circle,
-            image: DecorationImage(
-              image: AssetImage('assets/images/pngwing.com.png'),
+          Container(
+            height: 35,
+              width: 35,
+              margin: const EdgeInsets.only(top: 4),
+              decoration: const BoxDecoration(
+                color: Color.fromARGB(255, 231, 239, 170),
+                shape: BoxShape.circle,
+              ),
+            child: Container(
+              height: 35,
+              decoration: const BoxDecoration(
+                // shape: BoxShape.circle,
+                image: DecorationImage(
+                  image: AssetImage('assets/images/pngwing.com.png'),
+                ),
+              ),
             ),
-          ),
-        )
-      ],
+          )
+        ],
+      ),
     );
   }
 }
